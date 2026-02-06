@@ -272,6 +272,7 @@
             line-height: 1.1;
             box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 5px rgba(0,0,0,0.2);
             border-radius: 4px;
+            min-height: 60px;
         }
 
         .tile:hover {
@@ -306,9 +307,14 @@
         .side-bottom .tile-header { background: linear-gradient(135deg, #00c853 0%, #00897b 100%); }
         .side-left .tile-header { background: linear-gradient(135deg, #00c853 0%, #00897b 100%); }
         .corner-tile { 
-            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); 
-            border: 3px solid #558b2f; 
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 2px 5px rgba(0,0,0,0.2);
+            background: linear-gradient(135deg, #fffef9 0%, #fff9e6 100%);
+            border: 3px solid #8b5a2b;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 5px rgba(0,0,0,0.2);
+            border-radius: 4px;
+        }
+        
+        .corner-tile .tile-header {
+            background: linear-gradient(135deg, #00c853 0%, #00897b 100%) !important;
         }
 
         .player-token {
@@ -501,6 +507,8 @@
             justify-content: center;
             align-items: center;
             box-shadow: inset 0 2px 5px rgba(255,255,255,0.5), 0 4px 10px rgba(0,0,0,0.2);
+            pointer-events: none;
+            z-index: 5;
         }
 
         .center-title {
@@ -852,14 +860,6 @@
                 tile.innerHTML = `<div class="tile-header"></div><span style="z-index: 10;">${city.name}</span>`;
                 board.appendChild(tile);
             });
-            
-            const centerTile = document.createElement('div');
-            centerTile.className = 'corner-tile';
-            centerTile.id = 'tile-0';
-            centerTile.style.gridRow = '2 / 4';
-            centerTile.style.gridColumn = '2 / 4';
-            centerTile.innerHTML = '<div class="tile-header" style="background: #a78bfa;"></div><span style="z-index: 10;">Mulai</span>';
-            board.appendChild(centerTile);
         }
 
         function updateTokenPos() {
