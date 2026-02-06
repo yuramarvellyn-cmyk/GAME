@@ -534,6 +534,13 @@
             display: block;
         }
 
+        .char-card svg {
+            width: 96px;
+            height: 112px;
+            margin: 0 auto 10px;
+            display: block;
+        }
+
         .char-name {
             font-weight: 900;
             color: #fcd34d;
@@ -780,7 +787,13 @@
                 const card = document.createElement('div');
                 card.className = 'char-card';
                 card.onclick = () => finalStart(c.id);
-                card.innerHTML = `<svg class="char-svg" viewBox="0 0 100 120">${charAssets[c.id]}</svg><p class="char-name">${c.name}</p>`;
+                const svgWrapper = document.createElement('div');
+                svgWrapper.innerHTML = charAssets[c.id];
+                const charName = document.createElement('p');
+                charName.className = 'char-name';
+                charName.innerText = c.name;
+                card.appendChild(svgWrapper);
+                card.appendChild(charName);
                 grid.appendChild(card);
             });
         }
