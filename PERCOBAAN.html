@@ -334,10 +334,10 @@
             display: none !important;
         }
 
-        /* Control Buttons */
         .control-group {
             position: fixed;
             bottom: 40px;
+            right: 40px;
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -347,9 +347,6 @@
         .control-group.hidden {
             display: none !important;
         }
-
-        .left-controls { left: 40px; }
-        .right-controls { right: 40px; }
 
         .btn-dir {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -379,9 +376,7 @@
         }
 
         .btn-dir span { 
-            font-size: 10px; 
-            text-transform: uppercase; 
-            margin-top: 2px; 
+            display: none;
         }
 
         /* Quiz Overlay */
@@ -666,15 +661,9 @@
             <div id="player-token" class="player-token hidden"></div>
         </div>
 
-        <!-- Control Buttons -->
-        <div id="left-ctrl" class="control-group left-controls hidden">
-            <button class="btn-dir" onclick="handleMove('left')">◀<span>Kiri</span></button>
-            <button class="btn-dir" onclick="handleMove('down')">▼<span>Bawah</span></button>
-        </div>
-
-        <div id="right-ctrl" class="control-group right-controls hidden">
-            <button class="btn-dir" onclick="handleMove('up')">▲<span>Atas</span></button>
-            <button class="btn-dir" onclick="handleMove('right')">▶<span>Kanan</span></button>
+        <!-- Control Button -->
+        <div id="move-btn-ctrl" class="control-group hidden">
+            <button class="btn-dir" onclick="handleMove('right')">▶</button>
         </div>
     </main>
 
@@ -834,8 +823,7 @@
             
             document.getElementById('screen-char').classList.add('hidden');
             document.getElementById('top-status').classList.remove('hidden');
-            document.getElementById('left-ctrl').classList.remove('hidden');
-            document.getElementById('right-ctrl').classList.remove('hidden');
+            document.getElementById('move-btn-ctrl').classList.remove('hidden');
             
             const playerToken = document.getElementById('player-token');
             playerToken.innerHTML = charAssets[charId];
