@@ -609,6 +609,338 @@
             font-size: 18px;
             margin-bottom: 30px;
         }
+
+        /* Mobile Responsive - Tablet (max 768px) */
+        @media (max-width: 768px) {
+            .game-container {
+                padding: clamp(10px, 3vw, 20px);
+            }
+
+            .screen-overlay {
+                padding: clamp(15px, 3vw, 30px);
+            }
+
+            .content-card {
+                width: 95%;
+                padding: clamp(15px, 4vw, 30px);
+                border: clamp(5px, 1.5vw, 8px) solid var(--wood);
+            }
+
+            .status-bar {
+                flex-direction: row;
+                justify-content: center;
+                text-align: center;
+                padding: clamp(10px, 2.5vw, 15px);
+            }
+
+            .status-left {
+                width: 100%;
+                justify-content: center;
+                gap: clamp(10px, 2vw, 15px);
+            }
+
+            .avatar-badge {
+                gap: clamp(4px, 1.5vw, 8px);
+                padding: clamp(4px, 1vw, 6px) clamp(6px, 1.5vw, 10px);
+            }
+
+            .location-info {
+                margin: clamp(5px, 1.5vw, 10px) 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .stamina-info {
+                width: 100%;
+                text-align: center;
+            }
+
+            .control-group {
+                bottom: clamp(15px, 3vw, 25px);
+                right: clamp(15px, 3vw, 25px);
+            }
+
+            .btn-dir {
+                width: clamp(55px, 12vw, 65px);
+                height: clamp(55px, 12vw, 65px);
+                font-size: clamp(14px, 3.5vw, 18px);
+            }
+
+            .monopoly-board {
+                width: min(80vh, 100vw);
+                height: min(80vh, 100vw);
+                padding: clamp(6px, 1.5vw, 10px);
+                gap: clamp(3px, 0.8vw, 5px);
+            }
+
+            .tile {
+                padding: clamp(3px, 0.8vw, 5px) clamp(2px, 0.5vw, 4px) clamp(4px, 1vw, 6px) clamp(2px, 0.5vw, 4px);
+                min-height: clamp(45px, 9vw, 55px);
+                font-size: clamp(8px, 1.3vw, 10px);
+            }
+
+            .tile span {
+                font-size: clamp(8px, 1.2vw, 9px);
+                max-width: 90%;
+            }
+
+            .char-grid {
+                grid-template-columns: repeat(auto-fit, minmax(clamp(100px, 20vw, 140px), 1fr));
+                gap: clamp(12px, 4vw, 25px);
+                margin-bottom: clamp(15px, 4vw, 30px);
+            }
+
+            .char-card {
+                padding: clamp(10px, 2.5vw, 15px);
+                border: clamp(1px, 0.4vw, 2px) solid #a78bfa;
+            }
+
+            .char-svg {
+                width: clamp(60px, 13vw, 80px);
+                height: clamp(75px, 16vw, 100px);
+            }
+
+            .quiz-header {
+                font-size: clamp(10px, 1.5vw, 12px);
+            }
+
+            .quiz-question {
+                font-size: clamp(16px, 3.5vw, 22px);
+                margin-bottom: clamp(20px, 4vw, 25px);
+            }
+
+            .quiz-opt-btn {
+                padding: clamp(10px, 2vw, 14px) clamp(10px, 1.8vw, 12px);
+                font-size: clamp(12px, 2.3vw, 15px);
+            }
+
+            #input-player-name {
+                font-size: clamp(14px, 2.8vw, 16px);
+                padding: clamp(8px, 1.8vw, 10px) clamp(10px, 2.5vw, 12px);
+            }
+        }
+
+        /* Mobile Responsive - Phone (max 480px) */
+        @media (max-width: 480px) {
+            .game-container {
+                padding: clamp(8px, 2vw, 12px);
+            }
+
+            .screen-overlay {
+                padding: clamp(10px, 2vw, 20px);
+            }
+
+            .content-card {
+                width: 100%;
+                padding: clamp(12px, 3vw, 20px);
+                border: clamp(4px, 1vw, 6px) solid var(--wood);
+                max-height: 90vh;
+            }
+
+            .status-bar {
+                padding: clamp(8px, 2vw, 10px);
+                flex-wrap: wrap;
+                gap: clamp(8px, 2vw, 10px);
+            }
+
+            .status-left {
+                width: 100%;
+                gap: clamp(8px, 2vw, 10px);
+            }
+
+            .avatar-badge {
+                flex: 1;
+                justify-content: center;
+                min-width: 150px;
+            }
+
+            .location-info, .stamina-info {
+                width: 100%;
+                margin: 0;
+            }
+
+            .location-label, .stamina-label {
+                font-size: clamp(6px, 1.2vw, 8px);
+            }
+
+            .player-name, #current-loc {
+                font-size: clamp(11px, 2.5vw, 14px);
+            }
+
+            .control-group {
+                bottom: clamp(10px, 2vw, 15px);
+                right: clamp(10px, 2vw, 15px);
+            }
+
+            .btn-dir {
+                width: clamp(50px, 11vw, 60px);
+                height: clamp(50px, 11vw, 60px);
+                font-size: clamp(12px, 3vw, 16px);
+                box-shadow: 0 clamp(2px, 0.5vw, 3px) 0 #c41e3a;
+            }
+
+            .monopoly-board {
+                width: min(75vh, 100vw);
+                height: min(75vh, 100vw);
+                padding: clamp(4px, 1vw, 6px);
+                gap: clamp(2px, 0.4vw, 3px);
+                border: clamp(3px, 0.8vw, 4px) solid var(--gold);
+            }
+
+            .tile {
+                padding: clamp(2px, 0.4vw, 3px) clamp(2px, 0.3vw, 3px);
+                min-height: clamp(35px, 7vw, 45px);
+                font-size: clamp(7px, 1vw, 9px);
+                border: clamp(1.5px, 0.3vw, 2px) solid #8b5a2b;
+            }
+
+            .tile span {
+                font-size: clamp(6px, 0.9vw, 8px);
+                max-width: 85%;
+                margin-top: clamp(2px, 0.5vw, 4px);
+            }
+
+            .tile-header {
+                height: 22%;
+            }
+
+            .char-grid {
+                grid-template-columns: repeat(auto-fit, minmax(clamp(80px, 18vw, 110px), 1fr));
+                gap: clamp(10px, 3vw, 15px);
+                margin-bottom: clamp(10px, 3vw, 20px);
+            }
+
+            .char-card {
+                padding: clamp(8px, 2vw, 12px);
+                border: clamp(1px, 0.3vw, 1.5px) solid #a78bfa;
+            }
+
+            .char-svg {
+                width: clamp(50px, 11vw, 70px);
+                height: clamp(62px, 13vw, 85px);
+            }
+
+            .char-name {
+                font-size: clamp(10px, 2vw, 11px);
+            }
+
+            h1 {
+                font-size: clamp(24px, 6vw, 36px);
+                margin-bottom: clamp(10px, 2vw, 15px);
+            }
+
+            h2 {
+                font-size: clamp(18px, 5vw, 28px);
+                margin-bottom: clamp(8px, 2vw, 12px);
+            }
+
+            p, ul li {
+                font-size: clamp(11px, 2.5vw, 13px);
+            }
+
+            ul {
+                padding-left: clamp(15px, 4vw, 20px);
+                margin: clamp(8px, 2vw, 15px) 0;
+            }
+
+            .quiz-header {
+                font-size: clamp(9px, 1.3vw, 11px);
+                margin-bottom: clamp(12px, 2.5vw, 15px);
+            }
+
+            .quiz-question {
+                font-size: clamp(13px, 3vw, 18px);
+                margin-bottom: clamp(15px, 3vw, 20px);
+            }
+
+            #quiz-options {
+                gap: clamp(10px, 2vw, 12px);
+                margin-bottom: clamp(12px, 2.5vw, 15px);
+            }
+
+            .quiz-opt-btn {
+                padding: clamp(10px, 1.8vw, 12px) clamp(8px, 1.5vw, 10px);
+                font-size: clamp(11px, 2vw, 14px);
+                border: clamp(1.5px, 0.3vw, 2px) solid #667eea;
+            }
+
+            .center-title {
+                font-size: clamp(16px, 3.5vw, 20px);
+            }
+
+            .center-subtitle {
+                font-size: clamp(8px, 1.2vw, 9px);
+            }
+
+            #input-player-name {
+                font-size: clamp(13px, 2.5vw, 15px);
+                padding: clamp(8px, 1.5vw, 10px) clamp(8px, 2vw, 10px);
+                margin: clamp(10px, 2vw, 15px) 0;
+            }
+
+            .btn-gold {
+                padding: clamp(10px, 2vw, 12px) clamp(15px, 3vw, 20px);
+                font-size: clamp(12px, 2.3vw, 14px);
+                letter-spacing: clamp(0.5px, 0.3vw, 1px);
+            }
+
+            #end-title {
+                font-size: clamp(32px, 7vw, 42px);
+                margin-bottom: clamp(12px, 2.5vw, 15px);
+            }
+
+            #end-message {
+                font-size: clamp(12px, 2.5vw, 16px);
+                margin-bottom: clamp(15px, 3vw, 25px);
+            }
+
+            #life-icons {
+                font-size: clamp(16px, 3.5vw, 20px);
+                letter-spacing: clamp(0.5px, 0.3vw, 1px);
+            }
+
+            #feedback-icon {
+                font-size: clamp(40px, 10vw, 55px);
+                margin-bottom: clamp(8px, 1.5vw, 10px);
+            }
+
+            #feedback-title {
+                font-size: clamp(24px, 5vw, 32px);
+                margin-bottom: clamp(6px, 1vw, 8px);
+            }
+
+            #feedback-message {
+                font-size: clamp(11px, 2.3vw, 13px);
+                padding: 0 clamp(10px, 2vw, 15px);
+            }
+        }
+
+        /* Extra Small Devices (max 360px) */
+        @media (max-width: 360px) {
+            .monopoly-board {
+                width: min(70vh, 100vw);
+                height: min(70vh, 100vw);
+            }
+
+            .tile {
+                min-height: clamp(30px, 6vw, 40px);
+                font-size: clamp(6px, 0.8vw, 8px);
+            }
+
+            .char-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .control-group {
+                bottom: clamp(8px, 1.5vw, 12px);
+                right: clamp(8px, 1.5vw, 12px);
+            }
+
+            .btn-dir {
+                width: clamp(48px, 10vw, 55px);
+                height: clamp(48px, 10vw, 55px);
+            }
+        }
     </style>
 </head>
 <body>
